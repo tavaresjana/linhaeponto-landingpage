@@ -112,11 +112,124 @@ body{
     font-weight: 700;
     transition: all 0.5s;
     color: var(--black);
-    border:var(--roxo)
+    border:var(--roxo);
+    border: #B973E6;
 }
 .home-btn:hover{
     background: var(--roxo);
 }
 .home-img img{
     width: 100%;
+}
+
+/*responsivo*/
+@media (max-width:785px) {
+    .nav{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
+}
+
+.grupo{
+    background-color: #B973E6;
+    padding: 10px; /*altura do bloco --rosa */
+    height: 200px;
+
+    display: flex;
+    justify-content: space-around; /*posiciona horizontalmente começo, meio e fim*/
+    align-items: flex-start; /*posiciona verticalmente cima, meio e baixo*/
+}
+.grupo div{
+    padding: 25px 45px;
+    margin: 4px; /*espaçamento entre o bloco --rosa*/
+   
+    color: #ffffff;
+    padding: 10px;
+    flex-direction: row;
+}
+
+.grupo .img img{
+    flex: 1;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.grupo .frase{
+    padding: 50px;
+    flex: 1;
+    min-width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.grupo-lista {
+    justify-content: space-evenly;
+    float: right;
+    padding: 30px;
+    flex: 1;
+    min-width: 50%;
+    flex-direction: row;
+}
+.grupo-lista .div1{
+    justify-content: space-evenly;
+    float: right;
+    padding: 30px;
+    flex: 1;
+    min-width: 50%;
+}
+.grupo-lista .div2{
+    justify-content: space-evenly;
+    padding: 30px;
+    flex: 1;
+    min-width: 50%;
+    float: center;
 }
