@@ -179,95 +179,60 @@ body{
     }
 }
 
-.grupo{
-    background-color: #B973E6;
-    padding: 10px; /*altura do bloco --rosa */
-    height: 200px;
+/* Estilos para a seção "Sobre Nós" */
+.sobre-nos {
+  width: 100%;
+  padding: 0 10%;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
 
+.sobre-nos p {
+  text-align: justify;
+}
+
+.sobre-nos .text-h4 {
+  font-size: 1.5rem;
+  color: var(--laranja);
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.sobre-nos span {
+  color: var(--roxo);
+}
+
+
+/*lista de serviços*/
+.container {
     display: flex;
-    justify-content: space-around; /*posiciona horizontalmente começo, meio e fim*/
-    align-items: flex-start; /*posiciona verticalmente cima, meio e baixo*/
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha em telas menores */
 }
-.grupo div{
-    padding: 25px 45px;
-    margin: 4px; /*espaçamento entre o bloco --rosa*/
-    background-color: aqua;
-    color: #ffffff;
+
+.column {
+    flex: 1; /* As colunas ocupam o mesmo espaço */
     padding: 10px;
-    flex-direction: row;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho das colunas */
 }
 
-.grupo .img img{
-    flex: 1rem;
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-.grupo .frase{
-    padding: 50px;
-    flex: 1;
-    min-width: 50%;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-.grupo-lista {
-    justify-content: space-evenly;
-    float: right;
-    padding: 30px;
-    flex: 1;
-    min-width: 50%;
-    flex-direction: row;
-}
-.grupo-lista .div1{
-    justify-content: space-evenly;
-    float: right;
-    padding: 30px;
-    flex: 1;
-    min-width: 50%;
-}
-.grupo-lista .div2{
-    justify-content: space-evenly;
-    padding: 30px;
-    flex: 1;
-    min-width: 50%;
-    float: center;
-}
-.grupo-lista .text-h4{
-    font-size: 1.5rem;
-    color: var(--laranja);
-    margin-bottom: 1rem;
-    align-items: center;
-}
-.grupo-lista .lista li {
-    list-style-type: disc !important;
+.column img {
+    max-width: 100%; /* A imagem não ultrapassa o tamanho da sua div */
+    height: auto;
+    display: block; /* Remove espaçamento extra abaixo da imagem */
 }
 
-.grupo-lista .a p{
-    background-color: #E65C39 !important;
-    padding: 10px;
-    height: 25;
-    display: inline-block;
-}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha as colunas verticalmente em telas menores */
+    }
 
-.sobre-nos{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    padding: 0px 10%;
-    background-color: aquamarine;
-}
-.sobre-nos p{
-    text-align: justify;
-}
-.sobre-nos .text-h4{
-    font-size: 1.5rem;
-    color: var(--laranja);
-    margin-bottom: 1rem;
-    align-items: center;
-}
-.sobre-nos span{
-    color: var(--roxo);
+    .column {
+        flex: auto; /* As colunas se ajustam automaticamente */
+        width: 100%;
+        margin-bottom: 20px; /* Adiciona espaço entre as colunas */
+    }
 }
