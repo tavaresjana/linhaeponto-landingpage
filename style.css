@@ -229,6 +229,13 @@ body{
     box-sizing: border-box; /* Garante que o padding não aumente o tamanho das colunas */
 }
 
+.column h4{
+    font-size: 1.5rem;
+    color: var(--laranja);
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
 .column li{
     list-style-type: circle;
 }
@@ -337,5 +344,48 @@ body{
     .container {
         max-width: 100%;
         padding: 0 20px;
+    }
+}
+
+
+/*canva*/
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.rec {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.rec h2{
+    font-size: 1.5rem;
+    color: var(--laranja);
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.recomendacoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recomendacao {
+    flex-basis: calc(33.33% - 20px); /* Para 3 colunas, com espaçamento entre elas */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .recomendacao {
+        flex-basis: calc(50% - 20px); /* Para 2 colunas em telas menores */
     }
 }
