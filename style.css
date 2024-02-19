@@ -255,6 +255,7 @@ body{
 /*form*/
 .forms{
     background-color: #e2ceef;
+    margin: 0;
 }
 .formulario {
     width: 80%; /* Define a largura como 80% da largura do viewport */
@@ -265,9 +266,7 @@ body{
     border-radius: 10px;
     background-color: #e2ceef;
 }
-.formulario form{
-    padding: 0 10px;
-}
+
 
 /* Regras de mídia para tornar o formulário responsivo */
 @media screen and (max-width: 600px) {
