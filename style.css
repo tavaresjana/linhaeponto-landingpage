@@ -16,6 +16,7 @@
     --rosa:#E63241;
     --roxo:#B973E6;
     --salmao:#E67673;
+    --rosa-sobre-nos:#f08089;
 }
 body{
     color: var(--dark);
@@ -120,6 +121,9 @@ body{
 }
 .home-img img{
     width: 100%;
+    max-width: 100%; /* A imagem não ultrapassa o tamanho da sua div */
+    height: auto;
+    display: block;
 }
 
 /*responsivo*/
@@ -175,7 +179,12 @@ body{
         font-size: 15px;
     }
     .home-img{
-        width: 125%;
+        /*width: 125%;*/
+        /*height: auto;*/
+        
+    max-width: 100%; /* A imagem não ultrapassa o tamanho da sua div */
+    height: auto;
+    display: block;
     }
 }
 
@@ -183,7 +192,8 @@ body{
 .sobre-nos {
   width: 100%;
   padding: 0 10%;
-  background-color: aquamarine;
+  background:var(--rosa-sobre-nos);
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,7 +207,7 @@ body{
 
 .sobre-nos .text-h4 {
   font-size: 1.5rem;
-  color: var(--laranja);
+  color: var(--rosa);
   margin-bottom: 1rem;
   align-items: center;
 }
@@ -214,15 +224,20 @@ body{
 }
 
 .column {
-    flex: 1; /* As colunas ocupam o mesmo espaço */
-    padding: 10px;
+    flex: 12; /* As colunas ocupam o mesmo espaço */
+    padding: 6%;
     box-sizing: border-box; /* Garante que o padding não aumente o tamanho das colunas */
+}
+
+.column li{
+    list-style-type: circle;
 }
 
 .column img {
     max-width: 100%; /* A imagem não ultrapassa o tamanho da sua div */
     height: auto;
     display: block; /* Remove espaçamento extra abaixo da imagem */
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -233,6 +248,6 @@ body{
     .column {
         flex: auto; /* As colunas se ajustam automaticamente */
         width: 100%;
-        margin-bottom: 20px; /* Adiciona espaço entre as colunas */
+        margin-bottom: 10px; /* Adiciona espaço entre as colunas */
     }
 }
