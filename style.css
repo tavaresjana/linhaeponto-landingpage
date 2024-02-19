@@ -12,7 +12,7 @@
     --laranja:#E65C39;
     --white:#ffffff;
     --dark:#000000;
-    --yellow:rgb(245, 188, 0);
+    --cinza:#3F5259;
     --rosa:#E63241;
     --roxo:#B973E6;
     --salmao:#E67673;
@@ -53,7 +53,7 @@ body{
     transition: all 0.5s;
 }
 .nav ul li a:hover{
-    color: var(--yellow);
+    color: var(--cinza);
     font-style: italic;
     transition: none;
     font-weight: bold;
