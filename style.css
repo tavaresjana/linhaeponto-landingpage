@@ -16,6 +16,7 @@
     --rosa:#E63241;
     --roxo:#B973E6;
     --salmao:#E67673;
+    --rosa-sobre-nos:#f08089;
 }
 body{
     color: var(--dark);
@@ -112,11 +113,141 @@ body{
     font-weight: 700;
     transition: all 0.5s;
     color: var(--black);
-    border:var(--roxo)
+    border:var(--roxo);
+    border: #B973E6;
 }
 .home-btn:hover{
     background: var(--roxo);
 }
 .home-img img{
     width: 100%;
+    max-width: 100%; /* A imagem não ultrapassa o tamanho da sua div */
+    height: auto;
+    display: block;
+}
+
+/*responsivo*/
+@media (max-width:785px) {
+    .nav{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        /*width: 125%;*/
+        /*height: auto;*/
+        
+    max-width: 100%; /* A imagem não ultrapassa o tamanho da sua div */
+    height: auto;
+    display: block;
+    }
+}
+
+/* Estilos para a seção "Sobre Nós" */
+.sobre-nos {
+  width: 100%;
+  padding: 0 10%;
+  background:var(--rosa-sobre-nos);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.sobre-nos p {
+  text-align: justify;
+}
+
+.sobre-nos .text-h4 {
+  font-size: 1.5rem;
+  color: var(--rosa);
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.sobre-nos span {
+  color: var(--roxo);
+}
+
+
+/*lista de serviços*/
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha em telas menores */
+}
+
+.column {
+    flex: 12; /* As colunas ocupam o mesmo espaço */
+    padding: 6%;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho das colunas */
+}
+
+.column li{
+    list-style-type: circle;
+}
+
+.column img {
+    max-width: 100%; /* A imagem não ultrapassa o tamanho da sua div */
+    height: auto;
+    display: block; /* Remove espaçamento extra abaixo da imagem */
+    
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha as colunas verticalmente em telas menores */
+    }
+
+    .column {
+        flex: auto; /* As colunas se ajustam automaticamente */
+        width: 100%;
+        margin-bottom: 10px; /* Adiciona espaço entre as colunas */
+    }
 }
