@@ -352,7 +352,7 @@ body {
     width: 100%;
     padding: 10px 20px;
     background-color: #B973E6;
-    color: #000000;
+    color: var(--white);
     border: none;
     border-radius: 4px;
     cursor: pointer;
