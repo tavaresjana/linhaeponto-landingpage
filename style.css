@@ -91,6 +91,7 @@ body{
 }
 
 .home-text {
+    margin-top: 2rem;
     max-width: 37rem;
 }
 
@@ -107,6 +108,7 @@ body{
 
 .home-text p {
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .home-btn {
@@ -123,6 +125,7 @@ body{
 }
 
 .home-img img {
+    margin-top: 4rem;
     width: 100%;
     max-width: 100%;
     height: auto;
