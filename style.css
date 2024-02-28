@@ -440,3 +440,14 @@ html {
         flex-basis: calc(50% - 20px);
     }
 }
+/*links navbar*/
+#inicio,
+#sobre-nos,
+#servicos,
+#contato {
+    margin-top: -16px;
+    margin-bottom: 16px;
+    align-items: center;
+    gap: 5rem;
+    padding: 18px 40px;
+}
